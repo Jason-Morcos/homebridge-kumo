@@ -37,7 +37,7 @@ export class KumoPlatformAccessory_ductless {
     // determine device profile and additional sensors to tailor accessory to
     // the capabilities of the kumo device
     // (not yet implemented)
-    /*
+    
     if(this.directAccess) {
       this.platform.kumo.queryDeviceProfile_Direct(this.accessory.context.serial);
 
@@ -45,7 +45,7 @@ export class KumoPlatformAccessory_ductless {
 
       this.platform.kumo.queryDeviceAdapter_Direct(this.accessory.context.serial);
     }
-    */
+    
 
     // set accessory information
     
