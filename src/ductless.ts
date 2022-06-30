@@ -38,17 +38,16 @@ export class KumoPlatformAccessory_ductless {
     // the capabilities of the kumo device
     // (not yet implemented)
     
-    if(this.directAccess) {
-      this.platform.kumo.queryDeviceProfile_Direct(this.accessory.context.serial);
+    // if(this.directAccess) {
+    //   this.platform.kumo.queryDeviceProfile_Direct(this.accessory.context.serial);
 
-      let deviceSensors = this.platform.kumo.queryDeviceSensors_Direct(this.accessory.context.serial);
-      this.platform.log.info('deviceSensors: %s', deviceSensors);
-      // this doesn't work as you can't run 'await' during class init.
+    //   let deviceSensors = this.platform.kumo.queryDeviceSensors_Direct(this.accessory.context.serial);
+    //   this.platform.log.info('deviceSensors: %s', deviceSensors);
+    //   // this doesn't work as you can't run 'await' during class init.
 
-      this.platform.kumo.queryDeviceAdapter_Direct(this.accessory.context.serial);
-    }
+    //   this.platform.kumo.queryDeviceAdapter_Direct(this.accessory.context.serial);
+    // }
     
-
     // set accessory information
     
     if (accessory.context.zoneTable.unitType !== undefined && accessory.context.zoneTable.unitType !== null) {
