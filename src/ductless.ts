@@ -41,8 +41,8 @@ export class KumoPlatformAccessory_ductless {
     if(this.directAccess) {
       this.platform.kumo.queryDeviceProfile_Direct(this.accessory.context.serial);
 
-      deviceSensors = this.platform.kumo.queryDeviceSensors_Direct(this.accessory.context.serial);
-      this.log.info('deviceSensors: %s', deviceSensors);
+      let deviceSensors = this.platform.kumo.queryDeviceSensors_Direct(this.accessory.context.serial);
+      this.platform.log.info('deviceSensors: %s', deviceSensors);
 
       this.platform.kumo.queryDeviceAdapter_Direct(this.accessory.context.serial);
     }
