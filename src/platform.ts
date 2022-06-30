@@ -117,6 +117,11 @@ export class KumoHomebridgePlatform implements DynamicPlatformPlugin {
             this.log.info('Disabling directAccess to Kumo devices');
           } else {
             this.log.info('directAccess successful.');
+
+            // new code to query sensors
+            let deviceSensors = await this.kumo.queryDeviceSensors_Direct(device.serial);
+            this.log.info('deviceSensors: %s', deviceSensors);
+
           }
         } else {
           this.log.info('Using Kumo Cloud API for device control');

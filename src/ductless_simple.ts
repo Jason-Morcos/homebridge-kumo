@@ -39,6 +39,7 @@ export class KumoPlatformAccessory_ductless_simple {
 
       let deviceSensors = this.platform.kumo.queryDeviceSensors_Direct(this.accessory.context.serial);
       this.platform.log.info('deviceSensors: %s', deviceSensors);
+      // this doesn't work as you can't run 'await' during class init.
 
       this.platform.kumo.queryDeviceAdapter_Direct(this.accessory.context.serial);
     }
